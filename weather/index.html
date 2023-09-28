@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class=" bg-blue-600">
+    <div class="wrapper  text-white">
+        <div class=" font-sans text-4xl flex place-content-center font-bold  pt-14 text-black"> <h1>Weather App</h1></div>
+
+        
+
+        <div class="tab-container flex  justify-evenly text-xl pt-6">
+            <div >
+                <p class="tab " data-userWeather>Your Weather</p>
+
+            </div>
+            <div>
+                <p class="tab" data-searchWeather>Search Weather</p>
+
+            </div>
+            
+        </div>
+
+        <div class="weather-container">
+
+            <!-- grant location container-->
+            <div class=" flex place-content-center  text-xl ">
+
+            
+            <div class="sub-container grant-location-container   flex-col space-y-2  ">
+
+                <div class=" flex place-content-center">
+                    <img src="./images/location.png" width="80" height="80" loading="lazy">
+                </div>
+                <div class=" flex place-content-center" >
+                    <p class=" text-4xl font-serif">Grant Location Access</p>
+                </div>
+                <div class=" flex place-content-center">
+                    <p>Allow Access to get weather Information</p>
+                </div>
+                <div class=" flex place-content-center ">
+                    <button class="btn border rounded-md   bg-white bg-opacity-40 px-4 py-1" data-grantAccess>Grant Access</button>
+                </div>
+              
+            </div>
+        </div>
+
+            <!-- search form -> form-container-->
+            <div class=" place-content-center ">
+            <form class="form-container flex  place-content-center  " data-searchForm  >
+                <div >
+                    <input placeholder="Search for City..."  class=" border rounded-md py-2 px-5 w-96 opacity-40 text-black " data-searchInput>
+                    <button class="btn" type="submit"> 
+
+                </div>
+                <div   >
+                    <button class="btn flex-col mt-3" type="submit">
+                    <img src="./images/search.png"  width="25" height="25" loading="lazy">
+                </button>
+
+                </div>
+                
+              
+                    
+            </form>
+        </div>
+
+            <!--- loading screen container -->
+            <div class="sub-container loading-container   flex place-content-center">
+                <img src="./images/loading.gif" width="150" height="150">
+                
+            </div>
+
+            <!-- show weather info -->
+            <div class="sub-container user-info-container  font-mono flex-col ">
+
+                <!--city name and Flag-->
+                <div class="name flex space-x-2 flex place-content-center   ">
+                    <div >
+                        <p data-cityName class=" text-3xl"></p>
+
+                    </div>
+                    <div class=" flex justify-center">
+                        <img data-countryIcon  width="32" height="23">
+
+                    </div>
+                    
+                   
+                </div>
+
+                <div class="flex place-content-center">
+                     <!-- weather descriptuion-->
+                <p data-weatherDesc class="text-2xl"></p>
+
+                </div>
+
+                <div class=" flex place-content-center" >
+                <!--weather Icon-->
+                <img data-weatherIcon  width="150" height="150">
+                </div>
+                <div class=" text-5xl  flex place-content-center ">
+                <!--temperature-->
+                <p data-temp></p>
+                </div>
+
+               
+                <!--3 cards - parameters-->
+                <div class="parameter-container  flex place-content-center">
+                    <div class=" flex w-auto p-7 px-10 space-x-14 ">
+
+                    <!--card 1-->
+                    <div class="parameter border-b-2 flex-col justify-between p-5 bg-white  bg-opacity-40 ">
+                        <div class=" flex place-content-center">
+                            <img src="./images/wind.png"  width=" 60" height="60" >
+
+                            
+                        </div>
+                        <div class=" flex place-content-center">
+                            <p class=" text-3xl">windspeed</p>
+                        </div>
+                        <div class=" flex place-content-center">
+                            <p data-windspeed class=" text-3xl"></p>
+                        </div>
+                        
+                    </div>
+
+                    <!--card 2-->
+                    <div class="parameter border-b-2 flex-col justify-between py-7  px-9  bg-white bg-opacity-40  ">
+                        <div class=" flex place-content-center">
+                            <img src="./images/humidity.png"   width=" 50" height="50">
+
+                      </div>
+                      <div class=" flex place-content-center">
+                        <p class=" text-3xl">humidity</p>
+                      </div>
+                      <div class=" flex place-content-center">
+                        <p data-humidity class=" text-3xl"></p>
+                      </div>
+                       
+                    </div>
+
+                    <!--card 3-->
+                    <div class="parameter border-b-2 flex-col justify-between  py-8  px-10 mb-2  bg-white bg-opacity-40 ">
+                        <div class=" flex place-content-center">
+                            <img src="./images/cloud.png"  width=" 55" height="55" >
+                        </div>
+                        <div class=" flex place-content-center">
+                            <p class=" text-3xl" >clouds</p>
+                            
+                        </div>
+                        <div class=" flex place-content-center">
+                            <p  class=" text-3xl" data-cloudiness></p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+     
+    
+    <script src="script.js"></script>
+</body>
+</html>

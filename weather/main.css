@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem; 
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+
+.tab.current-tab{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.weather-container{
+    margin-block:4rem;
+}
+
+.grant-location-container {
+    display: none;
+
+}
+.grant-location-container.active {
+    display: flex ;
+
+}
+.loading-container{
+    display: none;
+}
+
+.loading-container.active{
+    display: flex;
+}
+.user-info-container{
+    display:none;
+}
+
+.user-info-container.active{
+    display: flex;
+}
+.form-container{
+    display: none;
+}
+
+.form-container.active{
+    display: flex;
+}
+
